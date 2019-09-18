@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import Button from './Button/Button';
+
 
 
 class Home extends Component {
@@ -13,6 +15,9 @@ class Home extends Component {
             My List
         </button>
       </Link>
+      <Button className="brown"> SUBMIT </Button>
+      <Button className="green"> SUBMIT MORE! </Button>
+
     </div>
     );
   }

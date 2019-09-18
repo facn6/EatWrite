@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css?family=Sunflower:300&display=swap');
+
+.green {
+background: #BDB246;
+border-radius: 20px;
+
+font-family: Sunflower;
+font-style: normal;
+font-weight: bold;
+font-size: 18px;
+line-height: 22px;
+
+color: #592E29;
+
+
+width: 295px;
+height: 64px;
+
+
+}
+
+.brown {
+background: #8A6552;
+border-radius: 20px;
+
+font-family: Sunflower;
+font-style: normal;
+font-weight: bold;
+font-size: 18px;
+line-height: 22px;
+
+
+color: #BDB246;
+
+
+width: 295px;
+height: 64px;
+
+
+}
