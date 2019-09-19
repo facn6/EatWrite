@@ -1,0 +1,32 @@
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  justify-content: space-around;
+  margin: auto;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  font-family: Sunflower;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+
+  color: #592e29;
+}
+
+.about {
+  background: #ffe0b5;
+  text-align: center;
+}
+
+.image {
+  display: flex;
+  align-self: center;
+}

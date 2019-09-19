@@ -6,17 +6,17 @@ const Home = () => {
   return (
     <div className="App">
       <h1>Project Home</h1>
-      <Link to="./list">
-        <Button className="green"> ABOUT THE APP </Button>
+      <Link to="./about">
+        <Button className="green"> about the app </Button>
       </Link>
       <Link to="./list">
-        <Button className="green"> FOOD SENSITIVITIES </Button>
+        <Button className="green"> food sensitivities </Button>
       </Link>
       <Link to="./list">
-        <Button className="brown"> SIGN-IN </Button>
+        <Button className="brown"> sign-in </Button>
       </Link>
       <Link to="./list">
-        <Button className="brown"> SIGN-UP </Button>
+        <Button className="brown"> sign-up </Button>
       </Link>
     </div>
   );
