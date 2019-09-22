@@ -23,6 +23,7 @@
 
   font-family: Sunflower;
   font-style: normal;
+<<<<<<< HEAD
   font-weight: bolder;
   font-size: 18px;
   line-height: 22px;
@@ -41,6 +42,9 @@
   font-family: Sunflower;
   font-style: normal;
   font-weight: bolder;
+=======
+  font-weight: bold;
+>>>>>>> ac5c7cf6e5c6ff150597ec7779672a11f386fdab
   font-size: 18px;
   line-height: 22px;
 
