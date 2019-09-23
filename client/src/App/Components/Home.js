@@ -9,7 +9,7 @@ const Home = () => {
       <Link to="./about">
         <Button className="green"> about the app </Button>
       </Link>
-      <Link to="./list">
+      <Link to="./food-sensitivities">
         <Button className="green"> food sensitivities </Button>
       </Link>
       <Link to="./list">

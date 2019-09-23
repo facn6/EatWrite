@@ -5,6 +5,7 @@ import Home from "./Components/Home";
 import List from "./Components/List";
 import About from "./Components/About/About.js";
 import Mood from "./Components/Mood/Mood.js";
+import FoodSensitivities from "./Components/Food-Sensitivities/Food-Sensitivities.js";
 
 const App = () => {
   const [state, setState] = React.useState(0);
@@ -20,6 +21,7 @@ const App = () => {
           state={state}
           component={Mood}
         />
+        <Route path="/food-sensitivities" component={FoodSensitivities} />
       </Switch>
     </div>
   );
