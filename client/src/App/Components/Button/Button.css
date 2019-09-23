@@ -17,13 +17,30 @@
   height: 64px;
 }
 
+ .smallgreen{
+background: #bdb246;
+  border-radius: 20px;
+
+  font-family: Sunflower;
+  font-style: normal;
+  font-weight: bolder;
+  font-size: 15px;
+  line-height: 22px;
+
+  color: #592e29;
+  text-transform: uppercase;
+
+  width: 160px;
+  height: 50px;
+}
+
+
 .brown {
   background: #8a6552;
   border-radius: 20px;
 
   font-family: Sunflower;
   font-style: normal;
-<<<<<<< HEAD
   font-weight: bolder;
   font-size: 18px;
   line-height: 22px;
@@ -42,9 +59,8 @@
   font-family: Sunflower;
   font-style: normal;
   font-weight: bolder;
-=======
+
   font-weight: bold;
->>>>>>> ac5c7cf6e5c6ff150597ec7779672a11f386fdab
   font-size: 18px;
   line-height: 22px;
 
