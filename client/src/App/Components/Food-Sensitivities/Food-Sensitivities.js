@@ -7,7 +7,7 @@ import Button from "../Button/Button";
 const FoodSensitivities = () => {
   return (
     <div>
-    <h1 className="header"> About Food Sensitivity</h1>
+    <p className="headers"> About Food Sensitivity</p>
       <div>
         <Container className="greenCont">
           <p>What’s the difference between being allergic to a food and being sensitive or intolerant to it?</p>
