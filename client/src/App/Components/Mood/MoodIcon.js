@@ -2,7 +2,7 @@ import "./MoodIcon.css";
 import React, { useState, useEffect } from "react";
 
 const MoodIcon = props => {
-  const func = () =>
+  const selectMood = () =>
     setMood(
       <div
         class="selected"
@@ -13,7 +13,7 @@ const MoodIcon = props => {
         {props.image}
       </div>
     );
-  const func2 = () =>
+  const unSelectMood = () =>
     setMood(
       <div
         onClick={() => {
@@ -35,8 +35,8 @@ const MoodIcon = props => {
   );
 
   useEffect(() => {
-    if (props.state === 0 || props.state != props.number) func2();
-    else if (props.state === props.number) func();
+    if (props.state === 0 || props.state != props.number) unSelectMood();
+    else if (props.state === props.number) selectMood();
   }, [props.state]);
 
   return (
