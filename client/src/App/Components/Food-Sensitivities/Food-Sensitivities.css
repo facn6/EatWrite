@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css?family=Sunflower:300&display=swap");
+
+
+body {
+  background-color: #ffe0b5;
+}
+
+.headers {
+  font-size: 35px;
+  font-family: Sunflower;
+  color: #592E29;
+  font-weight: bold;
+  text-align: center;
+}
+
+.buttons {
+  text-align: center;
+  
+
+}

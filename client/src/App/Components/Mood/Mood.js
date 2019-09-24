@@ -47,7 +47,7 @@ const Mood = () => {
         </div>
       </div>
       <h1>Today I feel... </h1>
-      <div class="wrapper">
+      <div className="wrapper">
         <div>
           <MoodIcon
             state={state}

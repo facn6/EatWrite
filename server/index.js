@@ -4,25 +4,20 @@ const bodyParser = require("body-parser");
 const app = express();
 app.use(bodyParser.urlencoded());
 app.use(bodyParser.json());
+const queries = require("./queries/queries.js");
 
 //to be used as an endpoint to log moods
 
 app.post("/logmood", ({ body }, res, next) => {
-  console
-    .log("Body recieved at endpoint:", body)
-    .then(res.redirect(`/logs/${username}`))
+  console.log("Body recieved at endpoint:", body);
+  queries
+    .logMood(body)
+    .then(res.redirect("/"))
     .catch(err => next(err));
 });
 
 // Serve the static files from the React app
 app.use(express.static(path.join(__dirname, "client/build")));
-
-// An api endpoint that returns a short list of items
-app.get("/api/getList", (req, res) => {
-  var list = ["item1", "item2", "item3"];
-  res.json(list);
-  console.log("Sent list of items");
-});
 
 // Handles any requests that don't match the ones above
 app.get("*", (req, res) => {
