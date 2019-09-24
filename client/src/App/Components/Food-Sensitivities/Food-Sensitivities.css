@@ -5,10 +5,11 @@ body {
   background-color: #ffe0b5;
 }
 
-.header {
+.headers {
   font-size: 35px;
   font-family: Sunflower;
   color: #592E29;
+  font-weight: bold;
   text-align: center;
 }
 
