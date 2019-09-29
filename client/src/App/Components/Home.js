@@ -18,6 +18,12 @@ const Home = () => {
       <Link to="./sign-up">
         <Button className="brown"> sign-up </Button>
       </Link>
+      <Link to="./chart">
+        <Button className="brown"> chart </Button>
+      </Link>
+      <Link to="./select-symptom">
+        <Button className="brown"> symptom </Button>
+      </Link>
     </div>
   );
 };

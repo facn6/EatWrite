@@ -52,19 +52,19 @@ const Mood = () => {
           <MoodIcon
             state={state}
             setState={setState}
-            number="1"
+            number="Thrilled"
             image=<img src="../../../../assets/tongue.png" />
           />
           <MoodIcon
             state={state}
             setState={setState}
-            number="2"
+            number="Concerned"
             image=<img src="../../../../assets/arrogant.png" />
           />
           <MoodIcon
             state={state}
             setState={setState}
-            number="3"
+            number="Sad"
             image=<img src="../../../../assets/sad.png" />
           />
         </div>
@@ -72,19 +72,19 @@ const Mood = () => {
           <MoodIcon
             state={state}
             setState={setState}
-            number="4"
+            number="Happy"
             image=<img src="../../../../assets/happy.png" />
           />
           <MoodIcon
             state={state}
             setState={setState}
-            number="5"
+            number="Confused"
             image=<img src="../../../../assets/confused.png" />
           />
           <MoodIcon
             state={state}
             setState={setState}
-            number="6"
+            number="Angry"
             image=<img src="../../../../assets/angry.png" />
           />
         </div>
@@ -92,13 +92,13 @@ const Mood = () => {
           <MoodIcon
             state={state}
             setState={setState}
-            number="7"
+            number="Peaceful"
             image=<img src="../../../../assets/peaceful.png" />
           />
           <MoodIcon
             state={state}
             setState={setState}
-            number="8"
+            number="Stressed"
             image=<img src="../../../../assets/stressed.png" />
           />
         </div>

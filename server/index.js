@@ -7,12 +7,20 @@ app.use(bodyParser.json());
 const queries = require("./queries/queries.js");
 
 //to be used as an endpoint to log moods
-
 app.post("/logmood", ({ body }, res, next) => {
   console.log("Body recieved at endpoint:", body);
   queries
     .logMood(body)
     .then(res.redirect("/"))
+    .catch(err => next(err));
+});
+
+app.post("/mooddata", ({ body }, res, next) => {
+  console.log("Moods recieved at endpoint:", body);
+  queries
+    .getMood(body)
+    //Why do I need this? It does nothing...
+    .then(logs => res.status(200).json(logs))
     .catch(err => next(err));
 });
 

@@ -1,15 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import { Route, Switch } from "react-router-dom";
 import "./App.css";
 import Home from "./Components/Home";
 import About from "./Components/About/About.js";
 import Mood from "./Components/Mood/Mood.js";
+import SelectSymptom from "./Components/SelectSymptom/SelectSymptom.js";
 
 import FoodSensitivities from "./Components/Food-Sensitivities/Food-Sensitivities.js";
 import SignIn from "./Components/Sign-In/Sign-In.js";
 
 const App = () => {
   const [state, setState] = React.useState(0);
+  
+
   return (
     <div>
       <Switch>
@@ -24,6 +27,7 @@ const App = () => {
 
         <Route path="/food-sensitivities" component={FoodSensitivities} />
         <Route path="/sign-in" component={SignIn} />
+        <Route path="/select-symptom" component={SelectSymptom} />
       </Switch>
     </div>
   );
