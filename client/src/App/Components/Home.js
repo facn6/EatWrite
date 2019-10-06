@@ -5,7 +5,10 @@ import Button from "./Button/Button";
 const Home = () => {
   return (
     <div className="App">
-      <h1>Project Home</h1>
+      <p>
+        <img src="../../../../assets/logo.png" />
+      </p>
+
       <Link to="./about">
         <Button className="green"> about the app </Button>
       </Link>
