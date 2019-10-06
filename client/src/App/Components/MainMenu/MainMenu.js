@@ -6,42 +6,44 @@ import Button from "../Button/Button";
 
 const MainMenu = () => {
   return (
-    <div className="main">
-      <Link to="./" style={{ textDecoration: "none" }}>
-        <Container className="greenContFlex">
-          <div>
-            <img src="../../../../assets/groceries.png" alt="" />
-          </div>
-          <div>add a meal</div>
-        </Container>
-      </Link>
+    <div>
+      <div className="main">
+        <Link to="./" style={{ textDecoration: "none" }}>
+          <Container className="greenContFlex">
+            <div>
+              <img src="../../../../assets/groceries1.png" alt="" />
+            </div>
+            <div>add a meal</div>
+          </Container>
+        </Link>
 
-      <Link to="./" style={{ textDecoration: "none" }}>
-        <Container className="brownContFlex">
-          <div>
-            <img src="../../../../assets/thermometer.png" alt="" />
-          </div>
-          <div>symptoms</div>
-        </Container>
-      </Link>
+        <Link to="./" style={{ textDecoration: "none" }}>
+          <Container className="brownContFlex">
+            <div>
+              <img src="../../../../assets/medical-history.png" alt="" />
+            </div>
+            <div>symptoms</div>
+          </Container>
+        </Link>
 
-      <Link to="./" style={{ textDecoration: "none" }}>
-        <Container className="brownContFlex">
-          <div>
-            <img src="../../../../assets/smiling.png" alt="" />
-          </div>
-          <div>mood</div>
-        </Container>
-      </Link>
+        <Link to="/mood" style={{ textDecoration: "none" }}>
+          <Container className="brownContFlex">
+            <div>
+              <img src="../../../../assets/happy3.png" alt="" />
+            </div>
+            <div>mood</div>
+          </Container>
+        </Link>
 
-      <Link to="./" style={{ textDecoration: "none" }}>
-        <Container className="greenContFlex">
-          <div>
-            <img src="../../../../assets/analytics.png" alt="" />
-          </div>
-          <div>add a meal</div>
-        </Container>
-      </Link>
+        <Link to="/select-symptom" style={{ textDecoration: "none" }}>
+          <Container className="greenContFlex">
+            <div>
+              <img src="../../../../assets/analysis.png" alt="" />
+            </div>
+            <div>track & visualize</div>
+          </Container>
+        </Link>
+      </div>
 
       <Link to="./">
         <Button className="smallgreen">back</Button>

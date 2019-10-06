@@ -3,9 +3,8 @@
   display: flex;
   flex-direction: column;
   position: relative;
-  max-width: 70%;
+  width: 70%;
   margin: auto;
-  justify-content: flex-end;
 }
 
 .brownConts {
@@ -26,7 +25,8 @@
   line-height: 22px;
 
   color: #bdb246;
-  height: 100px;
+
+  height: 25%;
 }
 
 .greenContFlex {
@@ -39,7 +39,15 @@
   font-weight: bold;
   font-size: 18px;
   line-height: 22px;
-  height: 200px;
+
+  height: 25%;
 
   color: #592e29;
+}
+
+@media screen and (max-width: 350px) {
+  .main {
+    flex-wrap: wrap;
+    width: 95%;
+  }
 }

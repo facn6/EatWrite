@@ -2,37 +2,12 @@ import "./MoodIcon.css";
 import React, { useState, useEffect } from "react";
 
 const MoodIcon = props => {
-  const selectMood = () =>
-    setIcon(
-      <div
-        className="selected"
-        onClick={() => {
-          props.setMood("");
-        }}
-      >
-        {props.image}
-      </div>
-    );
-  const unSelectMood = () =>
-    setIcon(
-      <div
-        onClick={() => {
-          props.setMood(props.moodChosen);
-        }}
-      >
-        {props.image}
-      </div>
-    );
+  const selectMood = () => setSelected("selected");
+  const unSelectMood = () => setSelected("");
 
-  const [icon, setIcon] = React.useState(
-    <div
-      onClick={() => {
-        props.setMood(props.moodChosen);
-      }}
-    >
-      {props.image}
-    </div>
-  );
+  const [selected, setSelected] = React.useState("");
+  console.log("Selected", selected);
+  console.log("Mood", props.mood);
 
   useEffect(() => {
     if (props.mood != props.moodChosen) unSelectMood();
@@ -41,8 +16,18 @@ const MoodIcon = props => {
 
   return (
     <div>
-      {icon}
-      <p>{props.mood}</p>
+      <div
+        className={selected}
+        onClick={() => {
+          {
+            selected ? unSelectMood() : selectMood();
+            selected ? props.setMood("") : props.setMood(props.moodChosen);
+          }
+        }}
+      >
+        {props.image}
+        <div>{props.moodChosen}</div>
+      </div>
     </div>
   );
 };

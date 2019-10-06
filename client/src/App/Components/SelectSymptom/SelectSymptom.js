@@ -45,6 +45,7 @@ class StackedColumn100Chart extends Component {
       },
       data: [
         {
+          indexLabelFontColor: "rgba(0,0,0,0.0)",
           type: "stackedColumn100",
           name: "Positive Moods %",
           showInLegend: true,
@@ -52,6 +53,7 @@ class StackedColumn100Chart extends Component {
           dataPoints: dataPos
         },
         {
+          indexLabelFontColor: "rgba(0,0,0,0.0)",
           type: "stackedColumn100",
           name: "Negative Moods %",
           showInLegend: true,
@@ -65,7 +67,6 @@ class StackedColumn100Chart extends Component {
       <div>
         <h1></h1>
         <CanvasJSChart options={options} onRef={ref => (this.chart = ref)} />
-        {/*You can get reference to the chart instance as shown above using onRef. This allows you to access all chart properties and methods*/}
       </div>
     );
   }

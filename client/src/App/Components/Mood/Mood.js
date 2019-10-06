@@ -2,6 +2,7 @@ import React from "react";
 import "./Mood.css";
 import MoodIcon from "./MoodIcon.js";
 import Button from "../Button/Button";
+import { Link } from "react-router-dom";
 
 const Mood = props => {
   const [mood, setMood] = React.useState("");
@@ -103,10 +104,12 @@ const Mood = props => {
           />
         </div>
       </div>
-      <Button function={GetData} className="green">
-        {" "}
-        submit{" "}
-      </Button>
+      <Link to="./main-menu">
+        <Button function={GetData} className="green">
+          {" "}
+          submit{" "}
+        </Button>
+      </Link>
     </div>
   );
 };
