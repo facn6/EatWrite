@@ -3,31 +3,31 @@ import React, { useState, useEffect } from "react";
 
 const MoodIcon = props => {
   const selectMood = () =>
-    setMood(
+    setIcon(
       <div
-        class="selected"
+        className="selected"
         onClick={() => {
-          props.setState(0);
+          props.setMood("");
         }}
       >
         {props.image}
       </div>
     );
   const unSelectMood = () =>
-    setMood(
+    setIcon(
       <div
         onClick={() => {
-          props.setState(props.number);
+          props.setMood(props.moodChosen);
         }}
       >
         {props.image}
       </div>
     );
 
-  const [mood, setMood] = React.useState(
+  const [icon, setIcon] = React.useState(
     <div
       onClick={() => {
-        props.setState(props.number);
+        props.setMood(props.moodChosen);
       }}
     >
       {props.image}
@@ -35,14 +35,14 @@ const MoodIcon = props => {
   );
 
   useEffect(() => {
-    if (props.state === 0 || props.state != props.number) unSelectMood();
-    else if (props.state === props.number) selectMood();
-  }, [props.state]);
+    if (props.mood != props.moodChosen) unSelectMood();
+    else if (props.mood === props.moodChosen) selectMood();
+  }, [props.mood]);
 
   return (
     <div>
-      {mood}
-      <p>{props.state}</p>
+      {icon}
+      <p>{props.mood}</p>
     </div>
   );
 };

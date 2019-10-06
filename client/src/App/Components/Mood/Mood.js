@@ -3,8 +3,8 @@ import "./Mood.css";
 import MoodIcon from "./MoodIcon.js";
 import Button from "../Button/Button";
 
-const Mood = () => {
-  const [state, setState] = React.useState(0);
+const Mood = props => {
+  const [mood, setMood] = React.useState("");
   const [input, setInput] = React.useState("");
   const [inputTime, setInputTime] = React.useState("");
 
@@ -16,7 +16,7 @@ const Mood = () => {
         "Content-Type": "application/json"
       },
       body: JSON.stringify({
-        mood: state,
+        mood: mood,
         date: input,
         time: inputTime
       })
@@ -50,55 +50,55 @@ const Mood = () => {
       <div className="wrapper">
         <div>
           <MoodIcon
-            state={state}
-            setState={setState}
-            number="Thrilled"
+            mood={mood}
+            setMood={setMood}
+            moodChosen="Thrilled"
             image=<img src="../../../../assets/tongue.png" />
           />
           <MoodIcon
-            state={state}
-            setState={setState}
-            number="Concerned"
+            mood={mood}
+            setMood={setMood}
+            moodChosen="Concerned"
             image=<img src="../../../../assets/arrogant.png" />
           />
           <MoodIcon
-            state={state}
-            setState={setState}
-            number="Sad"
+            mood={mood}
+            setMood={setMood}
+            moodChosen="Sad"
             image=<img src="../../../../assets/sad.png" />
           />
         </div>
         <div>
           <MoodIcon
-            state={state}
-            setState={setState}
-            number="Happy"
+            mood={mood}
+            setMood={setMood}
+            moodChosen="Happy"
             image=<img src="../../../../assets/happy.png" />
           />
           <MoodIcon
-            state={state}
-            setState={setState}
-            number="Confused"
+            mood={mood}
+            setMood={setMood}
+            moodChosen="Confused"
             image=<img src="../../../../assets/confused.png" />
           />
           <MoodIcon
-            state={state}
-            setState={setState}
-            number="Angry"
+            mood={mood}
+            setMood={setMood}
+            moodChosen="Angry"
             image=<img src="../../../../assets/angry.png" />
           />
         </div>
         <div>
           <MoodIcon
-            state={state}
-            setState={setState}
-            number="Peaceful"
+            mood={mood}
+            setMood={setMood}
+            moodChosen="Peaceful"
             image=<img src="../../../../assets/peaceful.png" />
           />
           <MoodIcon
-            state={state}
-            setState={setState}
-            number="Stressed"
+            mood={mood}
+            setMood={setMood}
+            moodChosen="Stressed"
             image=<img src="../../../../assets/stressed.png" />
           />
         </div>
