@@ -9,7 +9,8 @@ const InputField = props => {
         type={"text"}
         className={props.className}
         placeholder={props.children}
-      />
+        onInput={e => props.setInput(e.target.value)}
+      ></input>
     </div>
   );
 };

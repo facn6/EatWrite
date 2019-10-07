@@ -21,7 +21,7 @@ const App = () => {
         <Route path="/food-sensitivities" component={FoodSensitivities} />
         <Route path="/sign-in" component={SignIn} />
         <Route path="/select-symptom" component={SelectSymptom} />
-        <Route path="/main-menu" component={MainMenu} />
+        <Route path="/main-menu" component={Home} />
       </Switch>
     </div>
   );
