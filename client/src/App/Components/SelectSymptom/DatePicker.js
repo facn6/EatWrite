@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import { addDays, subDays} from "date-fns";
-const Picker = (props) => {
 
-
+import { addDays, subDays } from "date-fns";
+const Picker = props => {
   return (
     <>
       <DatePicker

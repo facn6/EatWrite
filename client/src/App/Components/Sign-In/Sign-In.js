@@ -6,7 +6,7 @@ import InputField from "../InputField/InputField";
 const SignIn = () => {
     const [input, setInput] = React.useState("");
     const [pass, setPass] = React.useState("");
-
+console.log("ffffffffff",input);
     const UserData = () => {
       console.log("hhh");
     return fetch("/signin", {
@@ -15,7 +15,9 @@ const SignIn = () => {
         Accept: "application/json",
         "Content-Type": "application/json"
       },
-      body: JSON.stringify("Ayah")
+      body: JSON.stringify({
+        userName: input
+      })
     }) // fetch ends
       .then(function(response) {
         console.log("ayah",response);
