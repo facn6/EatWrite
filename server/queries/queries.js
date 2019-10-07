@@ -11,6 +11,9 @@ const logMood = body => {
   );
 };
 
+const getUser = userName =>
+  connection.query("SELECT * FROM users WHERE name = $1;", [userName]);
+
 // const getMood = body => {
 //   const { start, end } = body;
 //
@@ -35,5 +38,6 @@ const getMood = body => {
 
 module.exports = {
   logMood,
-  getMood
+  getMood,
+  getUser
 };

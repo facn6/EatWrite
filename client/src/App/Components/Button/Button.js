@@ -5,8 +5,7 @@ const Button = props => {
   return (
     <div>
       <button onClick={props.function} className={props.className}>
-        {" "}
-        {props.children}{" "}
+        {props.children}
       </button>
     </div>
   );

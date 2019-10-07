@@ -24,6 +24,15 @@ app.post("/mooddata", ({ body }, res, next) => {
     .catch(err => next(err));
 });
 
+app.post("/signin", ({ body }, res, next) => {
+  console.log("fff",body);
+  queries
+    .getUser(body)
+    //Why do I need this? It does nothing...
+    .then(user => res.status(200).json(user))
+    .catch(err => next(err));
+});
+
 // Serve the static files from the React app
 app.use(express.static(path.join(__dirname, "client/build")));
 

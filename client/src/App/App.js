@@ -11,7 +11,7 @@ import SignIn from "./Components/Sign-In/Sign-In.js";
 
 const App = () => {
   const [state, setState] = React.useState(0);
-  
+
 
   return (
     <div>
@@ -28,6 +28,7 @@ const App = () => {
         <Route path="/food-sensitivities" component={FoodSensitivities} />
         <Route path="/sign-in" component={SignIn} />
         <Route path="/select-symptom" component={SelectSymptom} />
+        <Route path="/main-menu" component={Home} />
       </Switch>
     </div>
   );
