@@ -13,7 +13,7 @@ const logMood = body => {
 
 const getUser = body =>{
     const { userName } = body;
-  connection.query(`SELECT * FROM users WHERE (name = $1)`, [userName]);
+return  connection.query(`SELECT * FROM users WHERE (name = $1)`, [userName]);
 }
 // const getMood = body => {
 //   const { start, end } = body;

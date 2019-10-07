@@ -6,7 +6,7 @@ const InputField = props => {
     <div>
       <input
         id="input"
-        type={"text"}
+        type={props.type}
         className={props.className}
         placeholder={props.children}
         onInput={e => props.setInput(e.target.value)}
