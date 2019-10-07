@@ -1,11 +1,12 @@
 import React ,{ useState } from "react";
 import "./Sign-In.css";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 import Button from "../Button/Button";
 import InputField from "../InputField/InputField";
 const SignIn = () => {
     const [input, setInput] = React.useState("");
     const [pass, setPass] = React.useState("");
+    const [user,setUser]= React.useState(false);
 console.log("ffffffffff",input);
     const UserData = () => {
       console.log("hhh");
@@ -26,6 +27,10 @@ console.log("ffffffffff",input);
       .then(function(parsed) {
         console.log("Data from the DB:", parsed);
         var results = parsed.rows;
+if(results[0].password===pass)
+{
+   setUser(true);
+ }
         console.log("Rows from the DB:", results);
 });
 };
@@ -42,15 +47,15 @@ console.log("ffffffffff",input);
         </InputField>
         </div>
         <div className="inputfield">
-          <InputField setInput={setPass} input={pass}  className="input">
+          <InputField setInput={setPass} input={pass} type= "password"  className="input">
            Insert password
         </InputField>
       </div>
       </div>
       <div className="buttons">
-      <Link to="./main-menu">
+
         <Button function={UserData} input={input} className="smallgreen"> SIGN-IN</Button>
-      </Link>
+    {user ? <Redirect to="/main-menu" /> : null}
 
       <Link to="./">
         <Button className="smallgreen"> MAIN PAGE </Button>
