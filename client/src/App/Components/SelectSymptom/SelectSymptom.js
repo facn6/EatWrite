@@ -45,6 +45,8 @@ class StackedColumn100Chart extends Component {
       },
       data: [
         {
+          indexLabelFontColor: "rgba(0,0,0,0.0)",
+
           type: "stackedColumn100",
           name: "Positive Moods %",
           showInLegend: true,
@@ -52,6 +54,8 @@ class StackedColumn100Chart extends Component {
           dataPoints: dataPos
         },
         {
+          indexLabelFontColor: "rgba(0,0,0,0.0)",
+
           type: "stackedColumn100",
           name: "Negative Moods %",
           showInLegend: true,
@@ -65,7 +69,6 @@ class StackedColumn100Chart extends Component {
       <div>
         <h1></h1>
         <CanvasJSChart options={options} onRef={ref => (this.chart = ref)} />
-        {/*You can get reference to the chart instance as shown above using onRef. This allows you to access all chart properties and methods*/}
       </div>
     );
   }
@@ -89,7 +92,6 @@ const SelectSymptom = () => {
       })
     }) // fetch ends
       .then(function(response) {
-        console.log("Response is:", response);
         return response.json();
       })
       .then(function(parsed) {
@@ -107,13 +109,11 @@ const SelectSymptom = () => {
         };
 
         var objectOfDays = groupBy(results, "mood_date");
-        console.log(objectOfDays);
 
         //Array of arrays
 
         const entries = Object.entries(objectOfDays);
         entries.sort();
-        console.log(entries);
 
         entries.forEach(function(element) {
           let moodsPos = [];
@@ -127,7 +127,6 @@ const SelectSymptom = () => {
               element.mood == "Peaceful" ||
               element.mood == "Thrilled"
             ) {
-              console.log(element.mood);
               countPos += 1;
               moodsPos.push(element.mood);
             } else {
@@ -135,24 +134,22 @@ const SelectSymptom = () => {
               moodsNeg.push(element.mood);
             }
           });
-          console.log(countPos);
-          console.log(countNeg);
+
           let linePos = {
             label: label,
             y: countPos,
             indexLabel: moodsPos.join()
           };
-          console.log("LinePos", linePos);
+
           let lineNeg = {
             label: label,
             y: countNeg,
             indexLabel: moodsNeg.join()
           };
-          console.log("LineNeg", linePos);
+
           dataPos.push(linePos);
-          console.log(dataPos);
+
           dataNeg.push(lineNeg);
-          console.log(dataNeg);
         });
       }) //parsed ends
       .then(() => {

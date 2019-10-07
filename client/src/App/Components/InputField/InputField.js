@@ -4,7 +4,12 @@ import "./InputField.css";
 const InputField = props => {
   return (
     <div>
-      <input type={"text"} className={props.className} placeholder={props.children}/>
+      <input
+        id="input"
+        type={"text"}
+        className={props.className}
+        placeholder={props.children}
+      />
     </div>
   );
 };

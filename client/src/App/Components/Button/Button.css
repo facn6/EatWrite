@@ -15,10 +15,11 @@
 
   width: 295px;
   height: 64px;
+  margin: 10px;
 }
 
- .smallgreen{
-background: #bdb246;
+.smallgreen {
+  background: #bdb246;
   border-radius: 20px;
 
   font-family: Sunflower;
@@ -33,7 +34,6 @@ background: #bdb246;
   width: 160px;
   height: 50px;
 }
-
 
 .brown {
   background: #8a6552;
@@ -50,10 +50,11 @@ background: #bdb246;
 
   width: 295px;
   height: 64px;
+  margin: 10px;
 }
 
 .darkbrown {
-  background: #592E29;
+  background: #592e29;
   border-radius: 20px;
 
   font-family: Sunflower;
