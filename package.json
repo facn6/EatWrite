@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/facn6/EatWrite#readme",
   "dependencies": {
-    "apexcharts": "^3.8.6",
+    "apexcharts": "^3.24.0",
     "env2": "^2.2.2",
     "express": "^4.17.1",
     "file-system": "^2.2.2",
